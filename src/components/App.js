@@ -4,7 +4,7 @@ import Map from './Map';
 import Shield from '../assets/icons/ISS_insignia.png';
 
 const openNotifyAPI = axios.create({
-  baseURL: `http://api.open-notify.org/iss-now.json`,
+  baseURL: `https://api.wheretheiss.at/v1/satellites/25544`,
 });
 
 function Info(props) {
@@ -62,8 +62,8 @@ class App extends React.Component {
   getLocation() {
     openNotifyAPI.get('/').then((response) => {
       this.setState({
-        longitude: response.data.iss_position.longitude,
-        latitude: response.data.iss_position.latitude,
+        longitude: Number((response.data.longitude).toFixed(4)),
+        latitude: Number((response.data.latitude).toFixed(4)),
       });
     });
   }

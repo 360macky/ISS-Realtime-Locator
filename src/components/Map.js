@@ -9,8 +9,8 @@ let animate;
 
 function moveISS() {
   let data = JSON.parse(this.responseText);
-  let latitude = parseFloat(data['iss_position']['latitude']);
-  let longitude = parseFloat(data['iss_position']['longitude']);
+  let latitude = parseFloat(data['latitude']);
+  let longitude = parseFloat(data['longitude']);
   let rawLatLng = {
     lat: latitude,
     lng: longitude,
@@ -34,7 +34,7 @@ function moveISS() {
 }
 
 function doRequest() {
-  const ISS_API = 'http://api.open-notify.org/iss-now.json';
+  const ISS_API = 'https://api.wheretheiss.at/v1/satellites/25544';
   XHR.addEventListener('load', moveISS);
   XHR.open('GET', ISS_API);
   XHR.send();
