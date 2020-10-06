@@ -54,11 +54,6 @@ class App extends React.Component {
     this.getLocation = this.getLocation.bind(this);
   }
 
-  componentDidMount() {
-    this.getLocation();
-    setInterval(this.getLocation, 1000);
-  }
-
   getLocation() {
     openNotifyAPI.get('/').then((response) => {
       this.setState({
@@ -87,6 +82,12 @@ class App extends React.Component {
       </div>
     );
   }
+
+  componentDidMount() {
+    this.getLocation();
+    setInterval(this.getLocation, 1000);
+  }
+
 }
 
 export default App;
