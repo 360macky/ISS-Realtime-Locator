@@ -1,7 +1,7 @@
 <h1 align="center">📡 ISS Realtime Locator ⚡</h1>
 
 <p align="center">
-  ISS Realtime locator with Google Maps
+  ISS Realtime locator with Google Maps API
 </p>
 
 <p align="center">
