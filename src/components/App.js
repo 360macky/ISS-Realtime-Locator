@@ -50,17 +50,25 @@ class App extends React.Component {
     this.state = {
       longitude: '',
       latitude: '',
+      limitReached: false,
     };
     this.getLocation = this.getLocation.bind(this);
   }
 
   getLocation() {
-    openNotifyAPI.get('/').then((response) => {
-      this.setState({
-        longitude: Number((response.data.longitude).toFixed(4)),
-        latitude: Number((response.data.latitude).toFixed(4)),
+    fetch('https://api.wheretheiss.at/v1/satellites/25544')
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.status == 429) {
+          this.setState({ limitReached: true });
+        } else {
+          this.setState({
+            longitude: Number(data.longitude.toFixed(3)),
+            latitude: Number(data.latitude.toFixed(3)),
+            limitReached: false,
+          });
+        }
       });
-    });
   }
 
   render() {
@@ -68,6 +76,9 @@ class App extends React.Component {
       <div className="app">
         <h1 className="title-app">ISS Realtime Locator</h1>
         <div className="container">
+          {this.state.limitReached ? (
+            <div className="app-error">Alert: Tracking limit reached</div>
+          ) : null}
           <Table
             longitude={this.state.longitude}
             latitude={this.state.latitude}
@@ -75,7 +86,6 @@ class App extends React.Component {
           <Map
             longitude={this.state.longitude}
             latitude={this.state.latitude}
-            className="map"
           />
           <Info />
         </div>
@@ -85,9 +95,8 @@ class App extends React.Component {
 
   componentDidMount() {
     this.getLocation();
-    setInterval(this.getLocation, 1000);
+    setInterval(this.getLocation, 2000);
   }
-
 }
 
 export default App;
