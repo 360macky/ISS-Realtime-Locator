@@ -69,7 +69,7 @@ class Map extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="map">
         <div>
           <div  className="map-canvas" id="map-canvas"></div>
         </div>
