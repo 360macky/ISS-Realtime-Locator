@@ -21,6 +21,15 @@ body {
   align-items: center;
 }
 
+.app-error {
+  background-color: black;
+  color: $red-color;
+  font-family: $monospace-font;
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 5px;
+}
+
 ::selection {
   background-color: #6b6b83;
 }
@@ -114,9 +123,21 @@ $breakpoint-mobile: 700px;
 @media (max-width: $breakpoint-mobile) {
   .container {
     box-shadow: none;
+    width: 90%;
+  }
+
+  .info {
+    flex-direction: column;
+  }
+
+  .shield {
+    margin: 0;
+    width: 50%;
+    align-self: center;
   }
 
   .map-canvas {
+    min-height: 90vh;
     width: 100%;
   }
 
@@ -129,6 +150,11 @@ $breakpoint-mobile: 700px;
   }
 
   tbody {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .table {
+    width: 100%;
+    padding: 10px;
   }
 }
