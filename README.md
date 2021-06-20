@@ -5,7 +5,9 @@
 </p>
 
 <p align="center">
-  <img src="./.github/screenshot.png" />
+  <img src="./.github/screenshot.png" /><br/><br/>
+  <b>📱 It's a fully responsive tool for mobile</b><br/><br/>
+  <img src="./.github/iphone_screenshot.png" width="200" /><img src="./.github/samsung_screenshot.png" width="200" />
 </p>
 
 <p align="center">
@@ -16,11 +18,6 @@
   <img src="https://img.shields.io/static/v1?label=Sass&message=v1.26&color=ff54d4&logo=sass" />
   <img src="https://img.shields.io/static/v1?label=Google%20Maps%20API&message=via%20CDN&color=4285F4&logo=google-maps" />
 </p>
-
-## 💻 Devices
-### iPhone XR
-<img src="./.github/iphone_screenshot.png" width="200" />
-
 
 ## 🚀 Deployment
 📦 Install the dependencies
