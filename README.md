@@ -17,6 +17,11 @@
   <img src="https://img.shields.io/static/v1?label=Google%20Maps%20API&message=via%20CDN&color=4285F4&logo=google-maps" />
 </p>
 
+## 💻 Devices
+### iPhone XR
+<img src="./.github/iphone_screenshot.png" width="200" />
+
+
 ## 🚀 Deployment
 📦 Install the dependencies
 ```bash
