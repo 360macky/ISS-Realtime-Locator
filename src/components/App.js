@@ -69,7 +69,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <h1 className="title-app">ISS Realtime Locator</h1>
+        <h1 className="title-app">ISStation</h1>
         <div className="container">
           {this.state.limitReached ? (
             <div className="app-error">Alert: Tracking limit reached</div>
