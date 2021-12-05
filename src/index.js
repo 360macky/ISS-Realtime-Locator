@@ -3,4 +3,5 @@ import ReactDOM from 'react-dom';
 import App from './components/App';
 import './styles/sass/App.scss';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const container = document.getElementById('root');
+ReactDOM.render(<App />, container);
