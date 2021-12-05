@@ -1,13 +1,8 @@
 import React from 'react';
-import axios from 'axios';
 import Map from './Map';
 import Shield from '../assets/icons/ISS_insignia.png';
 
-const openNotifyAPI = axios.create({
-  baseURL: `https://api.wheretheiss.at/v1/satellites/25544`,
-});
-
-function Info(props) {
+function Info() {
   return (
     <div className="info">
       <p>
