@@ -71,9 +71,9 @@ class App extends React.Component {
       <div className="app">
         <h1 className="title-app">ISStation</h1>
         <div className="container">
-          {this.state.limitReached ? (
+          {this.state.limitReached && (
             <div className="app-error">Alert: Tracking limit reached</div>
-          ) : null}
+          )}
           <Table
             longitude={this.state.longitude}
             latitude={this.state.latitude}
