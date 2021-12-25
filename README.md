@@ -1,4 +1,14 @@
-<h1 align="center">📡 ISS Realtime Locator ⚡</h1>
+<p align="center">
+  <img
+    src=".github/ISSRealtimeLocatorIcon.png"
+    align="center"
+    width="100"
+    alt="ISS Realtime Locator"
+    title="ISS Realtime Locator"
+  />
+  <h1 align="center">📡 ISS Realtime Locator ⚡</h1>
+</p>
+
 
 <p align="center">
   ISS Realtime locator with Google Maps API
